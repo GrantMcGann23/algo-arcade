@@ -1,11 +1,14 @@
 {
-  "files": [],
+  "files": ["react-three-fiber.d.ts"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
     "jsx": "react-jsx",
-    "types": ["@react-three/fiber", "@react-three/drei", "three"]
-  }
+    "skipLibCheck": true,
+    "types": ["@react-three/fiber", "@react-three/drei", "three"],
+    "lib": ["ES2023", "dom"]
+  },
+  "include": ["src/**/*"]
 }

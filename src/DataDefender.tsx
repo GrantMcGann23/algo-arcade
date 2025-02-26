@@ -2,7 +2,7 @@
 /// <reference types="@react-three/drei" />
 
 // DataDefender.tsx
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Enemy {
   id: number;
