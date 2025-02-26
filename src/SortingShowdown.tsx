@@ -1,7 +1,7 @@
 /// <reference types="@react-three/fiber" />
 /// <reference types="@react-three/drei" />
 
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Text } from '@react-three/drei';
 

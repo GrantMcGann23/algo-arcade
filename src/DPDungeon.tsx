@@ -1,8 +1,6 @@
 /// <reference types="@react-three/fiber" />
 /// <reference types="@react-three/drei" />
 
-import React from 'react';
-
 const DPDungeon = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 text-white">
