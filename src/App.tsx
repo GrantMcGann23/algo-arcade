@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomeScreen from './HomeScreen';
+import SortingShowdown from './SortingShowdown';
+import BinaryTreeExplorer from './BinaryTreeExplorer'; // <--- Renamed or newly added BFS/DFS file
+import WeightedGraphExplorer from './WeightedGraphExplorer'; // <--- Weighted Graph file
+import DPDungeon from './DPDungeon';
+import DataDefender from './DataDefender';
+import Visualizer from './Visualizer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/sorting-showdown" element={<SortingShowdown />} />
+        
+        {/* BFS/DFS on a Binary Tree */}
+        <Route path="/binary-tree-explorer" element={<BinaryTreeExplorer />} />
+        
+        {/* Weighted Graph (Dijkstra / A* / Bellman-Ford) */}
+        <Route path="/weighted-graph-explorer" element={<WeightedGraphExplorer />} />
+        
+        <Route path="/dp-dungeon" element={<DPDungeon />} />
+        <Route path="/data-defender" element={<DataDefender />} />
+        <Route path="/visualizer" element={<Visualizer />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
