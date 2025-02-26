@@ -1,2 +1,1 @@
-/// <reference types="vite/client" />npm install -g vercel
-vercel
+/// <reference types="vite/client" />
